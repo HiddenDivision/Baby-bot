@@ -10,6 +10,8 @@ bot.on('ready', ()=>{
 bot.on('guildMemberAdd', member =>{
     const channel = member.guild.channels.find(channel => channel.id === '599042753904771075')
     if(!channel) return;
+    let role = member.guild.roles.find("id", "598929756989423626");
+    member.addRole(role.id);
     channel.send(`Welcome to ♡BabyDoll's Dollhouse♡! ${member} Jump into <#605056557348159696> and tell us about yourself!`)
 })
 
