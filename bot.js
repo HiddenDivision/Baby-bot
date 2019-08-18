@@ -3,7 +3,7 @@ const bot = new Client();
 const superagent = require('superagent');
 
 bot.on('ready', ()=>{
-    bot.user.setActivity("Jordan eat BabyDoll's Ass.", {type: ('WATCHING')})
+    bot.user.setActivity("Jordan eating BabyDoll's Ass.", {type: ('WATCHING')})
     console.log('Online.')
 })
 
@@ -67,6 +67,25 @@ bot.on('message', msg=>{
             if(args[1] === 'slap'){
                 let ment = msg.mentions.users.first()
                 let message = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} slapped everyone! ${message}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609624915326533645/tenor.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} slapped everyone! ${message}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609624915326533645/tenor.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to slap?')
                 }
@@ -89,21 +108,40 @@ bot.on('message', msg=>{
             }
             if(args[1] === 'kiss'){
                 let ment = msg.mentions.users.first()
-                let message2 = args.join(" ").slice(30);
+                let message = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} kissed everyone! ${message}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609625749959475230/tenor_1.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} kissed everyone! ${message}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609625749959475230/tenor_1.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to kiss?')
                 }
                 else{
                     if(msg.author.avatarURL === null){
                         const embed9 = new RichEmbed()
-                        .setAuthor(`${msg.author.username.toString()} kissed ${ment.username}! ${message2}`, ``, '')
+                        .setAuthor(`${msg.author.username.toString()} kissed ${ment.username}! ${message}`, ``, '')
                         .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609625749959475230/tenor_1.gif`)
                         .setColor(0x160033)
                         msg.channel.sendEmbed(embed9)
                     }
                     else{
                     const embed2 = new RichEmbed()
-                    .setAuthor(`${msg.author.username.toString()} kissed ${ment.username}! ${message2}`, `${msg.author.avatarURL}`, '')
+                    .setAuthor(`${msg.author.username.toString()} kissed ${ment.username}! ${message}`, `${msg.author.avatarURL}`, '')
                     .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609625749959475230/tenor_1.gif`)
                     .setColor(0x160033)
                     msg.channel.sendEmbed(embed2)
@@ -112,21 +150,40 @@ bot.on('message', msg=>{
             }
             if(args[1] === 'fuck'){
                 let ment = msg.mentions.users.first()
-                let message3 = args.join(" ").slice(30);
+                let message = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is fucking... everyone... Gosh why? ${message}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609628232526069766/tenor_2.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is fucking... everyone... Gosh why? ${message}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609628232526069766/tenor_2.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to... Nothing!')
                 }
                 else{
                     if(msg.author.avatarURL === null){
                         const embed9 = new RichEmbed()
-                        .setAuthor(`${msg.author.username.toString()} is fucking... ${ment.username}... Gosh why? ${message3}`, ``, '')
+                        .setAuthor(`${msg.author.username.toString()} is fucking... ${ment.username}... Gosh why? ${message}`, ``, '')
                         .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609628232526069766/tenor_2.gif`)
                         .setColor(0x160033)
                         msg.channel.sendEmbed(embed9)
                     }
                     else{
                     const embed3 = new RichEmbed()
-                    .setAuthor(`${msg.author.username.toString()} is fucking... ${ment.username}... Gosh why? ${message3}`, `${msg.author.avatarURL}`, '')
+                    .setAuthor(`${msg.author.username.toString()} is fucking... ${ment.username}... Gosh why? ${message}`, `${msg.author.avatarURL}`, '')
                     .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609628232526069766/tenor_2.gif`)
                     .setColor(0x160033)
                     msg.channel.sendEmbed(embed3)
@@ -135,14 +192,33 @@ bot.on('message', msg=>{
             }
             if(args[1] === 'fu'){
                 let ment = msg.mentions.users.first()
-                let message4 = args.join(" ").slice(28);
+                let message = args.join(" ").slice(28);
+                if(args[2] === '@everyone'){
+                    message = args.join(" ").slice(15);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`Everyone, go fuck yourselves. ${msg.author.username.toString()} doesn't like all of you. ${message}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609629429953724416/tenor_3.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`Everyone, go fuck yourselves. ${msg.author.username.toString()} doesn't like all of you. ${message}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609629429953724416/tenor_3.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to tell to fuck theirself?')
                 }
                 else{
                     if(msg.author.avatarURL === null){
                         const embed9 = new RichEmbed()
-                        .setAuthor(`${ment.username}, go fuck yourself.  ${msg.author.username.toString()} doesn't like you.  ${message4}`, ``, '')
+                        .setAuthor(`${ment.username}, go fuck yourself. ${msg.author.username.toString()} doesn't like you.  ${message}`, ``, '')
                         .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609629429953724416/tenor_3.gif`)
                         .setColor(0x160033)
                         msg.channel.sendEmbed(embed9)
@@ -151,28 +227,47 @@ bot.on('message', msg=>{
                     const embed4 = new RichEmbed()
                     .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609629429953724416/tenor_3.gif`)
                     .setColor(0x160033)
-                    .setAuthor(`${ment.username}, go fuck yourself.  ${msg.author.username.toString()} doesn't like you.  ${message4}`, `${msg.author.avatarURL}`, '')
+                    .setAuthor(`${ment.username}, go fuck yourself. ${msg.author.username.toString()} doesn't like you.  ${message}`, `${msg.author.avatarURL}`, '')
                     msg.channel.sendEmbed(embed4)
                     }
                 }
             }
             if(args[1] === 'kill'){
                 let ment = msg.mentions.users.first()
-                let message5 = args.join(" ").slice(30);
+                let message = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} killed everyone! ${message}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609631380586102784/tenor_4.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} killed everyone! ${message}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609631380586102784/tenor_4.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to kill?')
                 }
                 else{
                     if(msg.author.avatarURL === null){
                         const embed9 = new RichEmbed()
-                        .setAuthor(`${msg.author.username.toString()} killed ${ment.username}! ${message5}`, ``, '')
+                        .setAuthor(`${msg.author.username.toString()} killed ${ment.username}! ${message}`, ``, '')
                         .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609631380586102784/tenor_4.gif`)
                         .setColor(0x160033)
                         msg.channel.sendEmbed(embed9)
                     }
                     else{
                     const embed5 = new RichEmbed()
-                    .setAuthor(`${msg.author.username.toString()} killed ${ment.username}! ${message5}`, `${msg.author.avatarURL}`, '')
+                    .setAuthor(`${msg.author.username.toString()} killed ${ment.username}! ${message}`, `${msg.author.avatarURL}`, '')
                     .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609631380586102784/tenor_4.gif`)
                     .setColor(0x160033)
                     msg.channel.sendEmbed(embed5)
@@ -181,21 +276,40 @@ bot.on('message', msg=>{
             }
             if(args[1] === 'hug'){
                 let ment = msg.mentions.users.first()
-                let message6 = args.join(" ").slice(29);
+                let message = args.join(" ").slice(29);
+                if(args[2] === '@everyone'){
+                    message = args.join(" ").slice(16);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} hugged everyone! ${message}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/608736492394905621/612511266216607744/kiadUBP.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} hugged everyone! ${message}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/608736492394905621/612511266216607744/kiadUBP.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to hug?')
                 }
                 else{
                     if(msg.author.avatarURL === null){
                         const embed9 = new RichEmbed()
-                        .setAuthor(`${msg.author.username.toString()} hugged ${ment.username}! ${message6}`, ``, '')
+                        .setAuthor(`${msg.author.username.toString()} hugged ${ment.username}! ${message}`, ``, '')
                         .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609637268906311707/tenor_1.gif`)
                         .setColor(0x160033)
                         msg.channel.sendEmbed(embed9)
                     }
                     else{
                     const embed6 = new RichEmbed()
-                    .setAuthor(`${msg.author.username.toString()} hugged ${ment.username}! ${message6}`, `${msg.author.avatarURL}`, '')
+                    .setAuthor(`${msg.author.username.toString()} hugged ${ment.username}! ${message}`, `${msg.author.avatarURL}`, '')
                     .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609637268906311707/tenor_1.gif`)
                     .setColor(0x160033)
                     msg.channel.sendEmbed(embed6)
@@ -204,21 +318,40 @@ bot.on('message', msg=>{
             }
             if(args[1] === 'shoot'){
                 let ment = msg.mentions.users.first()
-                let message7 = args.join(" ").slice(31);
+                let message = args.join(" ").slice(31);
+                if(args[2] === '@everyone'){
+                    message = args.join(" ").slice(18);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} shot everyone! ${message}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609643152260726785/tenor_6.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} shot everyone! ${message}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609643152260726785/tenor_6.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to shoot!?')
                 }
                 else{
                     if(msg.author.avatarURL === null){
                         const embed9 = new RichEmbed()
-                        .setAuthor(`${msg.author.username.toString()} shot ${ment.username}! ${message7}`, ``, '')
+                        .setAuthor(`${msg.author.username.toString()} shot ${ment.username}! ${message}`, ``, '')
                         .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609643152260726785/tenor_6.gif`)
                         .setColor(0x160033)
                         msg.channel.sendEmbed(embed9)
                     }
                     else{
                     const embed7 = new RichEmbed()
-                    .setAuthor(`${msg.author.username.toString()} shot ${ment.username}! ${message7}`, `${msg.author.avatarURL}`, '')
+                    .setAuthor(`${msg.author.username.toString()} shot ${ment.username}! ${message}`, `${msg.author.avatarURL}`, '')
                     .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609643152260726785/tenor_6.gif`)
                     .setColor(0x160033)
                     msg.channel.sendEmbed(embed7)
@@ -227,21 +360,40 @@ bot.on('message', msg=>{
             }
             if(args[1] === 'kms'){
                 let ment = msg.mentions.users.first()
-                let message8 = args.join(" ").slice(29);
+                let message = args.join(" ").slice(29);
+                if(args[2] === '@everyone'){
+                    message = args.join(" ").slice(16);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} goes kill himself with everyone... ${message}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609647462264864779/tenor_7.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} goes kill himself with everyone... ${message}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609647462264864779/tenor_7.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to kill yourself with..?')
                 }
                 else{
                     if(msg.author.avatarURL === null){
                         const embed9 = new RichEmbed()
-                        .setAuthor(`${msg.author.username.toString()} goes kill himself with ${ment.username}... ${message8}`, ``, '')
+                        .setAuthor(`${msg.author.username.toString()} goes kill himself with ${ment.username}... ${message}`, ``, '')
                         .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609647462264864779/tenor_7.gif`)
                         .setColor(0x160033)
                         msg.channel.sendEmbed(embed9)
                     }
                     else{
                     const embed8 = new RichEmbed()
-                    .setAuthor(`${msg.author.username.toString()} goes kill himself with ${ment.username}... ${message8}`, `${msg.author.avatarURL}`, '')
+                    .setAuthor(`${msg.author.username.toString()} goes kill himself with ${ment.username}... ${message}`, `${msg.author.avatarURL}`, '')
                     .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609647462264864779/tenor_7.gif`)
                     .setColor(0x160033)
                     msg.channel.sendEmbed(embed8)
@@ -251,6 +403,25 @@ bot.on('message', msg=>{
             if(args[1] === 'boop'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} booped everyone! ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609648336638705665/tenor_8.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} booped everyone! ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609648336638705665/tenor_8.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to boop?')
                 }
@@ -274,6 +445,25 @@ bot.on('message', msg=>{
             if(args[1] === 'suck'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is sucking... everyone... Why am I part of this? ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609648493434503193/tenor_9.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is sucking... everyone... Why am I part of this? ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609648493434503193/tenor_9.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to... WHY??')
                 }
@@ -297,6 +487,25 @@ bot.on('message', msg=>{
             if(args[1] === 'lick'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is licking... everyone... So lewd... ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609649685476540416/tenor_10.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is licking... everyone... So lewd... ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/570053851315568650/609649685476540416/tenor_10.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to... lick..?')
                 }
@@ -320,6 +529,25 @@ bot.on('message', msg=>{
             if(args[1] === 'pat'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(29);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(16);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} pats everyone! ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609794873335480350/tenor.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} pats everyone! ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/609302155253383170/609794873335480350/tenor.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to pat?')
                 }
@@ -367,6 +595,25 @@ bot.on('message', msg=>{
             if(args[1] === 'cuddle'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(32);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(19);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} cuddles everyone! ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609908895661424651/tenor.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} cuddles everyone! ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609908895661424651/tenor.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to cuddle?')
                 }
@@ -390,6 +637,25 @@ bot.on('message', msg=>{
             if(args[1] === 'tickle'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(32);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(19);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} tickles everyone! ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609909154781593610/tenor_1.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} tickles everyone! ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609909154781593610/tenor_1.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to tickle?')
                 }
@@ -413,6 +679,25 @@ bot.on('message', msg=>{
             if(args[1] === 'peep'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is peeping on everyone! ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609910538969022494/tenor_2.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is peeping on everyone! ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609910538969022494/tenor_2.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to peep?')
                 }
@@ -437,6 +722,25 @@ bot.on('message', msg=>{
                 if(args[2] === 'rape'){
                     let ment = msg.mentions.users.first()
                     let message9 = args.join(" ").slice(34);
+                    if(args[3] === '@everyone'){
+                        message9 = args.join(" ").slice(21);
+                        if(msg.author.avatarURL === null){
+                            const embed9 = new RichEmbed()
+                            .setAuthor(`${msg.author.username.toString()} ass raped everyone! ${message9}`, ``, '')
+                            .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609913346908618775/tenor_3.gif`)
+                            .setColor(0x160033)
+                            msg.channel.sendEmbed(embed9)
+                            return;
+                        }
+                        else{
+                            const embed = new RichEmbed()
+                            .setAuthor(`${msg.author.username.toString()} ass raped everyone! ${message9}`, `${msg.author.avatarURL}`, '')
+                            .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609913346908618775/tenor_3.gif`)
+                            .setColor(0x160033)
+                            msg.channel.sendEmbed(embed)
+                            return;
+                        }
+                    }
                     if(ment === undefined){
                         msg.channel.send('Who are you trying to ass rape?')
                     }
@@ -461,6 +765,25 @@ bot.on('message', msg=>{
             if(args[1] === 'kidnap'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(32);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(19);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} kidnapped everyone! ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609915218658852865/tenor_4.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} kidnapped everyone! ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609915218658852865/tenor_4.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to kidnap?')
                 }
@@ -484,6 +807,25 @@ bot.on('message', msg=>{
             if(args[1] === 'rape'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is going to rape everyone! ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609917249234403360/5e4.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} is going to rape everyone! ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609917249234403360/5e4.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to rape?')
                 }
@@ -507,6 +849,25 @@ bot.on('message', msg=>{
             if(args[1] === 'lewd'){
                 let ment = msg.mentions.users.first()
                 let message9 = args.join(" ").slice(30);
+                if(args[2] === '@everyone'){
+                    message9 = args.join(" ").slice(17);
+                    if(msg.author.avatarURL === null){
+                        const embed9 = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} wants to lewd everyone... WHY??? ${message9}`, ``, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609918047074910228/tenor_5.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed9)
+                        return;
+                    }
+                    else{
+                        const embed = new RichEmbed()
+                        .setAuthor(`${msg.author.username.toString()} wants to lewd everyone... WHY??? ${message9}`, `${msg.author.avatarURL}`, '')
+                        .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609918047074910228/tenor_5.gif`)
+                        .setColor(0x160033)
+                        msg.channel.sendEmbed(embed)
+                        return;
+                    }
+                }
                 if(ment === undefined){
                     msg.channel.send('Who are you trying to lewd?')
                 }
@@ -532,6 +893,25 @@ bot.on('message', msg=>{
                     if(args[3] === 'up'){
                         let ment = msg.mentions.users.first()
                         let message9 = args.join(" ").slice(37);
+                        if(args[4] === '@everyone'){
+                            message9 = args.join(" ").slice(24);
+                            if(msg.author.avatarURL === null){
+                                const embed9 = new RichEmbed()
+                                .setAuthor(`${msg.author.username.toString()} is FBI opening up everyone! ${message9}`, ``, '')
+                                .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609918828260098079/tenor_6.gif`)
+                                .setColor(0x160033)
+                                msg.channel.sendEmbed(embed9)
+                                return;
+                            }
+                            else{
+                                const embed = new RichEmbed()
+                                .setAuthor(`${msg.author.username.toString()} is FBI opening up everyone! ${message9}`, `${msg.author.avatarURL}`, '')
+                                .setImage(`https://cdn.discordapp.com/attachments/602964327431012513/609918828260098079/tenor_6.gif`)
+                                .setColor(0x160033)
+                                msg.channel.sendEmbed(embed)
+                                return;
+                            }
+                        }
                         if(ment === undefined){
                             msg.channel.send('Who are you trying to FBI open up?')
                         }
